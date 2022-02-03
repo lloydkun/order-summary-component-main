@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  background: #e0e8ff;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 100%;
+  background: white;
+  padding: 0;
+  margin: 5rem 4rem;
+  border-radius: 1rem;
+}
+
+.container img:first-child {
+  padding: 0;
+  width: 100%;
+  position: relative;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.container .container__order_summary {
+  padding: 0 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .container__order_summary h1 {
+  font-weight: 900;
+  color: #1f2f56;
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.container .container__order_summary p {
+  text-align: center;
+  color: #7280a7;
+}
+
+.container .container__plan {
+  background: #f5f7ff;
+  margin: 2rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #1f2f56;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.container .container__plan img {
+  height: 3rem;
+  width: 3rem;
+}
+
+.container .container__plan .container__plan_price p:first-child {
+  font-weight: 700;
+}
+
+.container .container__plan .container__plan_price p:last-child {
+  color: #7280a7;
+}
+
+.container .container__plan a {
+  font-weight: 700;
+  color: #3829e0;
+  cursor: pointer;
+}
+
+.container .container__plan a:hover {
+  color: rgba(56, 41, 224, 0.7);
+}
+
+.container .container__payment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 2rem;
+  margin-bottom: 1rem;
+}
+
+.container .container__payment .container__payment_btn,
+.container .container__payment .container__cancel_btn {
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: white;
+  font-weight: 900;
+  font-family: "Red Hat Display";
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.container .container__payment .container__payment_btn {
+  background: #3829e0;
+}
+
+.container .container__payment .container__payment_btn:hover {
+  background: rgba(56, 41, 224, 0.7);
+}
+
+.container .container__payment .container__cancel_btn {
+  margin-top: 1rem;
+  background: transparent;
+  color: #7280a7;
+}
+
+.container .container__payment .container__cancel_btn:hover {
+  color: #1f2f56;
+}
+
+.bg {
+  width: 100%;
+  background: url("../images/pattern-background-mobile.svg") no-repeat center/cover;
+  height: 400px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .container {
+    width: 50%;
+  }
+  .background {
+    background: url("../images/pattern-background-desktop.svg") no-repeat center/cover;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 25%;
+  }
+  .background {
+    background: url("../images/pattern-background-desktop.svg") no-repeat center/cover;
+  }
+}
+/*# sourceMappingURL=style.css.map */

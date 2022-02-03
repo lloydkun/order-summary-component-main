@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+$clr-pale-blue: hsl(225, 100%, 94%);
+$clr-bright-blue: hsl(245, 75%, 52%);
+$clr-very-pale-blue: hsl(225, 100%, 98%);
+$clr-desaturated-blue: hsl(224, 23%, 55%);
+$clr-dark-blue: hsl(223, 47%, 23%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 16px;
+    background: $clr-pale-blue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 100%;
+    background: white;
+    padding: 0;
+    margin: 5rem 4rem;
+    border-radius: 1rem;
+    img:first-child {
+        padding: 0;
+        width: 100%;
+        position: relative;
+        border-radius: 1rem 1rem 0 0;
+    }
+    .container__order_summary {
+        padding: 0 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            font-weight: 900;
+            color: $clr-dark-blue;
+            font-size: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        p {
+            text-align: center;
+            color: $clr-desaturated-blue;
+        }
+    }
+    .container__plan {
+        background: $clr-very-pale-blue;
+        margin: 2rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $clr-dark-blue;
+        padding: 1rem;
+        border-radius: 1rem;
+        img {
+            height: 3rem;
+            width: 3rem;
+        }
+        .container__plan_price {
+            p:first-child {
+                font-weight: 700;
+            }
+            p:last-child {
+                color: $clr-desaturated-blue;
+            }
+        }
+        a {
+            font-weight: 700;
+            color: $clr-bright-blue;
+            cursor: pointer;
+            &:hover {
+                color: rgba($clr-bright-blue, 0.7);
+            }
+        }
+    }
+    .container__payment {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 2rem;
+        margin-bottom: 1rem;
+        .container__payment_btn,
+        .container__cancel_btn {
+            width: 100%;
+            height: 3rem;
+            border-radius: 0.5rem;
+            border: none;
+            color: white;
+            font-weight: 900;
+            font-family: "Red Hat Display";
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .container__payment_btn {
+            background: $clr-bright-blue;
+            &:hover {
+                background: rgba($clr-bright-blue, 0.7);
+            }
+        }
+        .container__cancel_btn {
+            margin-top: 1rem;
+            background: transparent;
+            color: $clr-desaturated-blue;
+            &:hover {
+                color: $clr-dark-blue;
+            }
+        }
+    }
+}
+.bg {
+    width: 100%;
+    background: url("../images/pattern-background-mobile.svg") no-repeat center/cover;
+    height: 400px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    .container {
+        width: 50%;
+    }
+    .background {
+        background: url("../images/pattern-background-desktop.svg") no-repeat center/cover;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .container {
+        width: 25%;
+    }
+    .background {
+        background: url("../images/pattern-background-desktop.svg") no-repeat center/cover;
+    }
+}
